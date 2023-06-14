@@ -75,10 +75,23 @@ class SearchBar extends HTMLElement {
         color: white;
         border: 0;
       }
+
+      @media screen and (max-width: 1600px){
+        .search-container {
+          width: 800px;
+        }
+      }
+
+      @media screen and (max-width: 850px){
+        .search-container {
+          width: 600px;
+        }
+      }
       
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 650px){
         .search-container {
           flex-direction: initial;
+          width: 440px;
           position: static;
         }
         
@@ -90,6 +103,18 @@ class SearchBar extends HTMLElement {
         .search-container > button {
           width: 40%;
           height: 45px;
+        }
+      }
+
+      @media screen and (max-width: 500px){
+        .search-container {
+          width: 340px;
+        }
+      }
+
+      @media screen and (max-width: 350px){
+        .search-container {
+          width: auto;
         }
       }
       </style>

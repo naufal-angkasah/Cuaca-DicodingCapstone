@@ -8,6 +8,7 @@ const Home = {
         <h2 class="content-header-title">Temukan Kondisi Cuaca</h1>
       </div>
         <search-bar></search-bar>
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
         <weather-list class="mt-5 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"></weather-list>
         `;
     },
@@ -15,13 +16,23 @@ const Home = {
     async afterRender() {
         const searchElement = document.querySelector('search-bar');
         const weatherListElement = document.querySelector('weather-list');
+        const loadingIndicator = document.querySelector('.lds-facebook');
       
         const onButtonSearchClicked = async () => {
+          loadingIndicator.style.display = 'inline-block';
+
           try {
             const result = await DataSource.searchWeather(searchElement.value);
-            renderResult(result);
+      
+            setTimeout(function() {
+              loadingIndicator.style.display = 'none';
+              renderResult(result);
+            }, 2000);
           } catch (message) {
-            fallbackResult(message);
+            setTimeout(function() {
+              loadingIndicator.style.display = 'none';
+              fallbackResult(message);
+            }, 2000);
           }
       
         };

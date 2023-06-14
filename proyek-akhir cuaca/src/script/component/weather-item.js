@@ -77,6 +77,36 @@ class WeatherItem extends HTMLElement {
           flex-direction: column;
           align-items: center;
         }
+
+        @media screen and (max-width: 1600px){
+          .content-card-container {
+            width: 800px;
+          }
+        }
+  
+        @media screen and (max-width: 850px){
+          .content-card-container {
+            width: 600px;
+          }
+        }
+        
+        @media screen and (max-width: 650px){
+          .content-card-container {
+            width: 440px;
+          }
+        }
+  
+        @media screen and (max-width: 500px){
+          .content-card-container {
+            width: 340px;
+          }
+        }
+  
+        @media screen and (max-width: 330px){
+          .content-card-container {
+            width: auto;
+          }
+        }
         
     </style>
     <div class="content-card-container">
@@ -85,7 +115,7 @@ class WeatherItem extends HTMLElement {
     </div>
     <div class="content-card-list">
       <div class="content-weather-condition">
-        <img class="content-weather-icon" src='${this._icon}'>
+        <img class="content-weather-icon" src='${this._icon ?? ""}'>
         <p>${this._text}</p>
       </div>
     
