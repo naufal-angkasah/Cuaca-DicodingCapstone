@@ -9,6 +9,7 @@ import main from './script/views/main';
 
 const navbarElement = document.querySelector('#navbar-id');
 const skipLink = document.querySelector('.skip-to-content');
+const mainContent = document.querySelector('#content-id');
 
 const apps = new DrawerApp({
     button: document.querySelector('#navigation-drawer-id'),

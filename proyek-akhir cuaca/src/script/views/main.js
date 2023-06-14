@@ -4,24 +4,29 @@ import DataSource from '../data/data-source.js';
 
 const main = () => {
   const searchElement = document.querySelector('search-bar');
-  const clubListElement = document.querySelector('weather-list');
+  const weatherListElement = document.querySelector('weather-list');
 
   const onButtonSearchClicked = async () => {
     try {
-      const result = await DataSource.searchMovie(searchElement.value);
-      renderResult(result);
+      const result = await DataSource.searchWeather(searchElement.value);
+
+      setTimeout(function() {
+        renderResult(result);
+      }, 2000);
     } catch (message) {
-      fallbackResult(message);
+      setTimeout(function() {
+        fallbackResult(message);
+      }, 2000);
     }
 
   };
 
   const renderResult = results => {
-    clubListElement.movies = results;
+    weatherListElement.weathers = results;
   };
 
   const fallbackResult = message => {
-    clubListElement.renderError(message);
+    weatherListElement.renderError(message);
   };
 
 };
