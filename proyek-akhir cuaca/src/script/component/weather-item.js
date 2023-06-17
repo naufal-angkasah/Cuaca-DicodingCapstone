@@ -31,7 +31,7 @@ class WeatherItem extends HTMLElement {
         .content-card-container {
           padding: 2rem;
           margin: 1rem 0;
-          box-shadow: 0px 6px 8px 1px rgb(0 0 0 / 60%);
+          box-shadow: 1px 3px 7px 1px rgb(0 0 0 / 30%);
           width: 100%;
           border-radius: 10px;
           display: flex;

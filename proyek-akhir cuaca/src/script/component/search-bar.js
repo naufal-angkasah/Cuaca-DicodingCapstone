@@ -38,7 +38,7 @@ class SearchBar extends HTMLElement {
         width: 80%;
         padding: 16px;
         border-radius: 4px 0 0 4px;
-        border: 1px solid rgb(123, 129, 126);
+        border: 1px solid #2c3e50;
         font-weight: bold;
         color: black;
       }
@@ -62,7 +62,7 @@ class SearchBar extends HTMLElement {
         cursor: pointer;
         font-weight: bold;
         padding: 16px;
-        background-color: rgb(123, 129, 126);
+        background-color: #2c3e50;
         color: white;
         border: 0;
         border-radius: 0 4px 4px 0;
@@ -71,7 +71,7 @@ class SearchBar extends HTMLElement {
 
       .search-container > button:hover {
         font-weight: bolder;
-        background-color: black;
+        opacity: 0.8;
         color: white;
         border: 0;
       }
