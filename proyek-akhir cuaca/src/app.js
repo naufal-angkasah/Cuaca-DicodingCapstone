@@ -1,5 +1,6 @@
 import 'regenerator-runtime';
 import './styles/main.css';
+import './styles/article.css';
 import './styles/main-responsive.css';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
