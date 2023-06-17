@@ -55,7 +55,7 @@
     .header-inner {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10rem;
+        gap: 8rem;
         margin-top: 0;
     }
 
